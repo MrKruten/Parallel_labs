@@ -48,7 +48,7 @@ public class Program
                 testCountThreads = argCountThreads;
             }
         }
-        Console.WriteLine("\nNt: " + testCountThreads);
+       
         var stopwatch = new Stopwatch();
         var rawData = BDPatientsReader.ReadFile(@".\BD-Patients.csv", testCountRows);
 
@@ -59,7 +59,8 @@ public class Program
         stopwatch.Stop();
 
         Chart.Create(clustering, normalizedData, testNumClusters);
-        Console.WriteLine("\nNumber clusters: " + testNumClusters);
+        Console.WriteLine($"\nThreads: {testCountThreads}");
+        Console.WriteLine($"\nNumber clusters: {testNumClusters}");
         Console.WriteLine($"\nIndex: {testIndex}\n");
         Console.WriteLine($"\n{stopwatch.ElapsedMilliseconds} ms");
         Console.ReadLine();
