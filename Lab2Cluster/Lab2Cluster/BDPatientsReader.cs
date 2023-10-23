@@ -9,7 +9,7 @@ public static class BDPatientsReader
         if(string.IsNullOrEmpty(path) || countRows < 1) return Array.Empty<double[]>();
         var parsed = new List<PatientRow>();
 
-        using (var reader = new StreamReader(@"C:\projects\parallel\Lab2Cluster\BD-Patients.csv"))
+        using (var reader = new StreamReader(path))
         {
             var currentRowIndex = 1;
             const string hctMeanName = "HCT_mean";

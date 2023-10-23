@@ -11,4 +11,10 @@
     <PackageReference Include="ScottPlot" Version="4.1.68" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="BD-Patients.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
